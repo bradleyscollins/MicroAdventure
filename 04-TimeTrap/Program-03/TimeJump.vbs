@@ -10,7 +10,7 @@ Sub Main
   ' 40  INPUT D
   Dim D
   D = WScript.StdIn.ReadLine()
-  D = CInt(D)
+  D = CLng(D)
   ' 50  PRINT "ENTER PLACE";
   WScript.StdOut.Write "ENTER PLACE: "
   ' 60  INPUT P$
@@ -21,13 +21,13 @@ Sub Main
   ' 80  INPUT Y
   Dim Y
   Y = WScript.StdIn.ReadLine()
-  Y = CInt(Y)
+  Y = CLng(Y)
   ' 90  PRINT "ENTER SPEED FACTOR"
   WScript.StdOut.Write "ENTER SPEED FACTOR: "
   ' 100 INPUT S
   Dim S
   S = WScript.StdIn.ReadLine()
-  S = CInt(S)
+  S = CLng(S)
   ' 110 PRINT
   WScript.StdOut.WriteLine()
   ' 120 PRINT "ENTER JUMP-SPAN FACTOR"
@@ -37,7 +37,7 @@ Sub Main
   ' 140 INPUT M
   Dim M
   M = WScript.StdIn.ReadLine()
-  M = CInt(M)
+  M = CLng(M)
   ' 150 W = W - 6
   W = W - 6
   ' 160 Z = W - LEN(P$) - 2
