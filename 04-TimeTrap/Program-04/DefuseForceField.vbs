@@ -9,8 +9,9 @@ Sub Main
   Dim S
   S = 38
 
-  Dim R
+  Dim R, W ''' Right, Wrong
   R = 0
+  W = 0
 
   Dim Exploded, Diffused
   Exploded = False
@@ -41,7 +42,6 @@ Sub Main
       ' 120 PRINT "WRONG"
       WScript.StdOut.WriteLine "WRONG"
       ' 130 W = W + 1
-      Dim W
       W = W + 1
       ' 140 IF W = 5 THEN 200
       If W = 5 Then
@@ -50,13 +50,16 @@ Sub Main
       End If
     ' 150 GOTO 70
     Loop
-    ' 160 R = R + 1
-    R = R + 1
-    ' 170 PRINT R;" NUMBERS RIGHT!"
-    WScript.StdOut.WriteLine(R & " NUMBERS RIGHT!")
-    ' 180 IF R = 3 THEN 220
-    If R = 3 Then
-      Diffused = True
+
+    If Not Exploded Then
+      ' 160 R = R + 1
+      R = R + 1
+      ' 170 PRINT R;" NUMBERS RIGHT!"
+      WScript.StdOut.WriteLine(R & " NUMBERS RIGHT!")
+      ' 180 IF R = 3 THEN 220
+      If R = 3 Then
+        Diffused = True
+      End If
     End If
   ' 190 GOTO 40
   Loop
