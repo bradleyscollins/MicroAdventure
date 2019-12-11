@@ -8,7 +8,7 @@
 80  GOSUB 260
 90  PRINT "WHICH SWITCH";
 100 INPUT G$
-110 L = ASC(G$) = ASC("A")
+110 L = ASC(G$) - ASC("A")
 120 Y = INT(L / 5) + 1
 130 X = L - INT(L / 5) * 5 + 1
 140 D = ABS(Y0 - Y) + ABS(X0 - X)
